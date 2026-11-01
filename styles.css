@@ -924,3 +924,92 @@ a {
     box-shadow: none;
   }
 }
+
+
+/* ===== MOBILE: REMOVE UNWANTED LEFT/RIGHT SIDE SPACE ===== */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* Remove outer side gutters from full-width sections */
+  .section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Keep readable spacing inside the actual content */
+  .section > :not(.hero-grid):not(.contact-grid),
+  .hero-copy,
+  .section-heading,
+  .about-grid,
+  .experience-card,
+  .skills-grid,
+  .timeline,
+  .cert-row,
+  .contact > :not(.contact-grid) {
+    max-width: 100%;
+  }
+
+  /* Prevent cards and panels from creating extra horizontal gaps */
+  .project-card,
+  .project-reverse,
+  .project-info,
+  .skill-panel,
+  .experience-card,
+  .cert-row {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .project-info,
+  .skill-panel,
+  .experience-card,
+  .cert-row {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-heading,
+  .about-grid,
+  .timeline,
+  .contact > :not(.contact-grid) {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .hero.section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .footer {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .section-heading,
+  .about-grid,
+  .timeline,
+  .contact > :not(.contact-grid) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .hero.section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
